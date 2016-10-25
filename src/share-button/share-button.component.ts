@@ -4,8 +4,8 @@ import * as SocialService from '../social-share.service';
 
 @Component({
   selector: 'share-button',
-  templateUrl: './share-button.component.html',
-  styleUrls: ['./share-button.component.scss']
+  template: `<md-icon (click)= 'share()' [fontIcon]="info.icon"></md-icon>`,
+  styles: ['md-icon {  cursor: pointer; }'],
 })
 export class ShareButtonComponent implements OnInit {
 

@@ -4,8 +4,9 @@ import { MdIconRegistry } from '@angular2-material/icon';
 
 @Component({
   selector: 'social-share',
-  templateUrl: './social-share.component.html',
-  styleUrls: ['./social-share.component.scss']
+  template: `<ng-content select='social-label'></ng-content>
+                <ng-content select='share-button'></ng-content>`,
+  styles: ["@import '/node_modules/social-icon/css/socail-icon.css';:host { line-height: 24px;}"]
 })
 export class SocialShareComponent implements OnInit {
   constructor(iconRegister: MdIconRegistry) {
