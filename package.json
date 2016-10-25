@@ -1,0 +1,30 @@
+{
+  "name": "ng2-social-share",
+  "version": "0.1",
+  "description": "Angular2 social share component",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
+  "module": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M-Adoo/Angular2-social-share.git"
+  },
+  "keywords": [
+    "angular",
+    "social",
+    "share"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M-Adoo/Angular2-social-share/issues"
+  },
+  "homepage": "https://github.com/M-Adoo/Angular2-social-share#readme",
+  "dependencies": {
+    "@angular/core": "^2.0.0",
+    "@angular/common": "^2.0.0",
+    "@angular2-material/icon": "^2.0.0"
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc -p src"
+  }
+}
