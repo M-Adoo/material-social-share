@@ -7,7 +7,7 @@
   "module": "./dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/M-Adoo/social-share.git"
+    "url": "https://github.com/M-Adoo/ng2-social-share.git"
   },
   "keywords": [
     "angular",
@@ -16,9 +16,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/M-Adoo/social-share/issues"
+    "url": "https://github.com/M-Adoo/ng2-social-share/issues"
   },
-  "homepage": "https://github.com/M-Adoo/social-share#readme",
+  "homepage": "https://github.com/M-Adoo/ng2-social-share#readme",
   "dependencies": {
     "@angular/core": "^2.0.0",
     "@angular/common": "^2.0.0",
