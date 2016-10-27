@@ -5,6 +5,7 @@
         "experimentalDecorators": true,
         "module": "commonjs",
         "moduleResolution": "node",
+        //"outDir" :"../../pano-sdk-xbc/node_modules/social-share-ng2/",
         "outDir": "../dist/",
         "sourceMap": true,
         "target": "es5"

@@ -1,6 +1,6 @@
 {
-  "name": "socail-icon",
-  "css_prefix_text": "icon-",
+  "name": "social-icon",
+  "css_prefix_text": "social-",
   "css_use_suffix": false,
   "hinting": true,
   "units_per_em": 1000,
@@ -89,6 +89,12 @@
       "css": "gplus",
       "code": 62223,
       "src": "entypo"
+    },
+    {
+      "uid": "4743b088aa95d6f3b6b990e770d3b647",
+      "css": "facebook-squared",
+      "code": 62216,
+      "src": "fontawesome"
     },
     {
       "uid": "75ee244826395c7240c2d44546118c4a",

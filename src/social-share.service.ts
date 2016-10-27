@@ -60,7 +60,7 @@ function ignoreEmpty(key: string, v: string, prefix = '&'): string {
 }
 
 class WeiboShare implements SocialInfo {
-    icon = 'icon-weibo';
+    icon = 'social-weibo';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -73,7 +73,7 @@ class WeiboShare implements SocialInfo {
 }
 
 class TwitterShare implements SocialInfo {
-    icon = 'icon-twitter'
+    icon = 'social-twitter'
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -86,7 +86,7 @@ class TwitterShare implements SocialInfo {
 }
 
 class QQShare implements SocialInfo {
-    icon = 'icon-qq';
+    icon = 'social-qq';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -100,7 +100,7 @@ class QQShare implements SocialInfo {
 }
 
 class QzoneShare implements SocialInfo {
-    icon = 'icon-qzone';
+    icon = 'social-qzone';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -113,7 +113,7 @@ class QzoneShare implements SocialInfo {
 }
 
 class DoubanShare implements SocialInfo {
-    icon = 'icon-douban';
+    icon = 'social-douban';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -127,7 +127,7 @@ class DoubanShare implements SocialInfo {
 }
 
 class DiandianShare implements SocialInfo {
-    icon = 'icon-diandian';
+    icon = 'social-diandian';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -141,7 +141,7 @@ class DiandianShare implements SocialInfo {
 }
 
 class FacebookShare implements SocialInfo {
-    icon = 'icon-facebook';
+    icon = 'social-facebook';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -154,7 +154,7 @@ class FacebookShare implements SocialInfo {
 }
 
 class GoogleShare implements SocialInfo {
-    icon = 'icon-googleplus-rect';
+    icon = 'social-gplus';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -167,7 +167,7 @@ class GoogleShare implements SocialInfo {
 }
 
 class LinkedinShare implements SocialInfo {
-    icon = 'icon-linkedin-squared';
+    icon = 'social-linkedin-squared';
     linkTo = (title: string
         , url: string
         , summary?: string

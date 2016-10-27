@@ -1,19 +1,13 @@
-import { Component, OnInit, Injectable, ContentChild } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { MdIconRegistry } from '@angular2-material/icon';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'social-share',
   template: `<ng-content select='social-label'></ng-content>
                 <ng-content select='share-button'></ng-content>`,
-  styles: ["@import '/node_modules/social-icon/css/socail-icon.css';:host { line-height: 24px;}"]
+  styles: [":host { line-height: 24px;}"],
+
 })
-export class SocialShareComponent implements OnInit {
-  constructor(iconRegister: MdIconRegistry) {
-    iconRegister.setDefaultFontSetClass('socail-icon');
-  }
-  ngOnInit() {
-  }
+export class SocialShareComponent{
 }
 
 @Component({
