@@ -5,7 +5,10 @@ import * as SocialService from '../social-share.service';
 @Component({
   selector: 'share-button',
   template: `<md-icon (click)= 'share()' [fontIcon]="info.icon"></md-icon>`,
-  styles: ['md-icon {  cursor: pointer; }'],
+  styles: [`md-icon {  cursor: pointer; } 
+            md-icon:hover {font-size: 1.05em;
+              transform: translate(-0.1em, -0.1em);
+              text-shadow: .1em .1em #666;} `],
 })
 export class ShareButtonComponent implements OnInit {
 

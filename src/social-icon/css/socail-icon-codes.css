@@ -1,7 +1,11 @@
 
+.icon-qzone:before { content: '\e800'; } /* '' */
+.icon-diandian:before { content: '\e801'; } /* '' */
+.icon-douban:before { content: '\e802'; } /* '' */
 .icon-twitter:before { content: '\f099'; } /* '' */
 .icon-help:before { content: '\f128'; } /* '' */
 .icon-weibo:before { content: '\f18a'; } /* '' */
 .icon-qq:before { content: '\f1d6'; } /* '' */
 .icon-wechat:before { content: '\f1d7'; } /* '' */
-.icon-googleplus-rect:before { content: '\f309'; } /* '' */
+.icon-linkedin-squared:before { content: '\f30c'; } /* '' */
+.icon-gplus:before { content: '\f30f'; } /* '' */
