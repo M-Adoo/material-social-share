@@ -141,7 +141,7 @@ class DiandianShare implements SocialInfo {
 }
 
 class FacebookShare implements SocialInfo {
-    icon = 'social-facebook';
+    icon = 'social-facebook-squared';
     linkTo = (title: string
         , url: string
         , summary?: string
