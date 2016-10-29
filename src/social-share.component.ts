@@ -1,13 +1,26 @@
-import { Component} from '@angular/core';
+import { Component, Input, ContentChildren, AfterContentInit, QueryList } from '@angular/core';
+import { ShareButtonComponent } from './share-button/share-button.component';
 
 @Component({
   selector: 'social-share',
-  template: `<ng-content select='social-label'></ng-content>
-                <ng-content select='share-button'></ng-content>`,
+  template: `<div [style.color] = 'color'>
+              <ng-content select='social-label'></ng-content>
+              <ng-content select='share-button'></ng-content>
+             </div>`,
   styles: [":host { line-height: 24px;}"],
 
 })
-export class SocialShareComponent{
+
+
+export class SocialShareComponent implements AfterContentInit {
+  @Input() color: string;
+  @Input() hoverColor: string;
+  @ContentChildren(ShareButtonComponent) btns: QueryList<ShareButtonComponent>;
+  ngAfterContentInit() {
+    for (let btn of this.btns.toArray()) {
+       btn.parent = this;
+    }
+  }
 }
 
 @Component({

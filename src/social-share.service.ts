@@ -9,6 +9,9 @@ export interface SocialInfo {
         , img?: string
         , origin?: string
         , key?: string) => string;
+
+    //mouse over color  
+    hoverColor: string;
 }
 
 
@@ -61,6 +64,7 @@ function ignoreEmpty(key: string, v: string, prefix = '&'): string {
 
 class WeiboShare implements SocialInfo {
     icon = 'social-weibo';
+    hoverColor = '#e32529';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -74,6 +78,7 @@ class WeiboShare implements SocialInfo {
 
 class TwitterShare implements SocialInfo {
     icon = 'social-twitter'
+    hoverColor = '#1da1f3';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -87,6 +92,7 @@ class TwitterShare implements SocialInfo {
 
 class QQShare implements SocialInfo {
     icon = 'social-qq';
+    hoverColor = '#2b82d9';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -101,6 +107,7 @@ class QQShare implements SocialInfo {
 
 class QzoneShare implements SocialInfo {
     icon = 'social-qzone';
+    hoverColor = '#ecb934';
     linkTo = (title: string
         , url: string
         , summary?: string
@@ -113,6 +120,7 @@ class QzoneShare implements SocialInfo {
 }
 
 class DoubanShare implements SocialInfo {
+    hoverColor = '#071';
     icon = 'social-douban';
     linkTo = (title: string
         , url: string
@@ -127,6 +135,7 @@ class DoubanShare implements SocialInfo {
 }
 
 class DiandianShare implements SocialInfo {
+    hoverColor = 'gray';
     icon = 'social-diandian';
     linkTo = (title: string
         , url: string
@@ -141,6 +150,7 @@ class DiandianShare implements SocialInfo {
 }
 
 class FacebookShare implements SocialInfo {
+    hoverColor = '#3b5998';
     icon = 'social-facebook-squared';
     linkTo = (title: string
         , url: string
@@ -154,6 +164,7 @@ class FacebookShare implements SocialInfo {
 }
 
 class GoogleShare implements SocialInfo {
+    hoverColor = '#d0422a';
     icon = 'social-gplus';
     linkTo = (title: string
         , url: string
@@ -167,6 +178,7 @@ class GoogleShare implements SocialInfo {
 }
 
 class LinkedinShare implements SocialInfo {
+    hoverColor = '#0077b5';
     icon = 'social-linkedin-squared';
     linkTo = (title: string
         , url: string

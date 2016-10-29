@@ -1,7 +1,7 @@
 # Todo list
 
 - [ ] test all
-- [ ] color config
+- [x] color config
 - [ ] documents
 - [ ] what's it?
 

@@ -1,14 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import * as SocialService from '../social-share.service';
+import { SocialShareComponent } from '../social-share.component';
 
 @Component({
   selector: 'share-button',
-  template: `<md-icon fontSet='socail-icon' (click)= 'share()' [fontIcon]="info.icon"></md-icon>`,
+  template: `<md-icon fontSet='socail-icon' (click)= 'share()' [fontIcon]="info.icon" [style.color] = "_colorHolder"></md-icon>`,
   styles: [`md-icon {  cursor: pointer; } 
             md-icon:hover {font-size: 1.05em;
-              transform: translate(-0.1em, -0.1em);
-              text-shadow: .1em .1em #666;} `],
+              transform: translate(-0.05em, -0.05em);
+              text-shadow: .05em .05em #777;} `],
 })
 export class ShareButtonComponent implements OnInit {
 
@@ -26,6 +27,22 @@ export class ShareButtonComponent implements OnInit {
     let target_url = this.info.linkTo(this.title, url, this.summary, this.img, this.origin, this.key);
     window.open(target_url, null, null, false);
   }
+
+  @HostListener('mouseenter') onMouseEnter() {
+    let color = this.hoverColor;
+    if (!color && this.parent) { color = this.parent.hoverColor; }
+    if (!color) { color = this.info.hoverColor; }
+    this._colorHolder = color;
+  }
+  @HostListener('mouseleave') onMouseLeave() {
+    this._colorHolder = this.color;
+  }
+
+  private _colorHolder: string;
+  @Input() color: string;
+  @Input() hoverColor: string;
+
+  parent: SocialShareComponent;
 
   private info: SocialService.SocialInfo;
   private _title: string;
