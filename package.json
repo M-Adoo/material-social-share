@@ -1,6 +1,6 @@
 {
   "name": "social-share-ng2",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Angular2 social share component",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
@@ -22,7 +22,7 @@
   "dependencies": {
     "@angular/core": "^2.0.0",
     "@angular/common": "^2.0.0",
-    "@angular/material/icon": "^2.0.0-alpha.9-3",
+    "@angular/material": "^2.0.0-alpha.9-3",
     "@angular/platform-browser": "^2.0.0"
   },
   "scripts": {

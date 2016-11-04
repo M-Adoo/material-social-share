@@ -1,7 +1,7 @@
 ## install socail-share-ng2 component
 
 ```
- npm install -g angular-cli
+ npm i social-share-ng2
 ```
 
 ## include socail-share-ng2 module and style
