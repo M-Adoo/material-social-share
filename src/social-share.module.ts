@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SocialShareComponent, SocialLabel } from './social-share.component';
-import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
+import { MdIconModule, MdIconRegistry } from '@angular/material/icon';
 import { ShareButtonComponent } from './share-button/share-button.component'
 
 @NgModule({
