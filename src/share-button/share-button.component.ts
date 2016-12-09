@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import * as SocialService from '../social-share.service';
 import { SocialShareComponent } from '../social-share.component';
 
@@ -13,7 +12,7 @@ import { SocialShareComponent } from '../social-share.component';
 })
 export class ShareButtonComponent implements OnInit {
 
-  constructor(private defaultTitle: Title) { }
+  constructor() { }
 
   ngOnInit() {
   }
@@ -29,11 +28,10 @@ export class ShareButtonComponent implements OnInit {
   }
 
 
+  private _colorHolder: string;
   @HostListener('mouseenter') onMouseEnter() {
     let color = this.hoverColor;
-    if (!color && this.parent) { color = this.parent.hoverColor; }
-    if (!color) { color = this.info.hoverColor; }
-    this._colorHolder = color;
+    this._colorHolder = color ? color : this.info.hoverColor;
   }
   @HostListener('mouseleave') onMouseLeave() {
     this._colorHolder = this.color;
@@ -41,32 +39,41 @@ export class ShareButtonComponent implements OnInit {
 
   private _url: string;
   @Input() get url() {
-    return this._url ? this._url : window.location.href;
+    return this._url ? this._url : this.parent.url;
   }
 
   set url(url: string) {
     this._url = url;
   }
 
-  private _colorHolder: string;
-  @Input() color: string;
-  @Input() hoverColor: string;
+  private _color: string;
+  @Input() set color(c: string) {
+    this._color = c;
+  }
 
-  parent: SocialShareComponent;
+  get color() {
+    return this._color ? this._color : this.parent.color;
+  }
 
-  private info: SocialService.SocialInfo;
+  private _hoverColor: string;
+  @Input() set hoverColor(c: string) {
+    this._hoverColor = c;
+  }
+  get hoverColor() {
+    return this._hoverColor ? this._hoverColor : this.parent.hoverColor;
+  }
+  
   private _title: string;
   @Input() get title() {
-    return this._title ? this._title : this.defaultTitle.getTitle();
+    return this._title ? this._title : this.parent.title;
   }
   set title(t: string) {
     this._title = t;
   }
 
   private _summary: string;
-  @Input() get summary() {
-    //todo: if _summary is empty get default summary from head meta. 
-    return this._summary;
+  @Input() get summary() { 
+    return this._summary ? this._summary : this.parent.summary;
   }
   set summary(s: string) {
     this._summary = s;
@@ -74,8 +81,7 @@ export class ShareButtonComponent implements OnInit {
 
   private _img: string;
   @Input() get img() {
-    // todo: get the first img from current webpage.
-    return this._img;
+    return this._img ? this._img : this.parent.summary;
   }
   set img(img: string) {
     this._img = img;
@@ -94,4 +100,7 @@ export class ShareButtonComponent implements OnInit {
       console.log(`${this.social} is unsupported social service.`)
     }
   }
+
+  parent: SocialShareComponent;
+  private info: SocialService.SocialInfo;
 }
