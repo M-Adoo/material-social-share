@@ -1,6 +1,6 @@
 {
   "name": "social-share-ng2",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Angular2 social share component",
   "main": "dist/src/index.js",
   "typings": "dist/src/index.d.ts",
