@@ -7,7 +7,7 @@ import { ShareButtonComponent } from './share-button/share-button.component';
               <ng-content select='social-label'></ng-content>
               <ng-content select='share-button'></ng-content>
              </div>`,
-  styles: [":host { line-height: 24px;}"],
+  styles: [":host { line-height: 24px; display:block;}"],
 
 })
 

@@ -8,8 +8,8 @@ import { SocialShareComponent } from '../social-share.component';
   template: `<md-icon fontSet='socail-icon' (click)= 'share()' [fontIcon]="info.icon" [style.color] = "_colorHolder"></md-icon>`,
   styles: [`md-icon {  cursor: pointer; } 
             md-icon:hover {font-size: 1.05em;
-              transform: translate(-0.05em, -0.05em);
-              text-shadow: .05em .05em #777;} `],
+              transform: translate(-0.02em, -0.02em);
+              text-shadow: .05em .05em #ddd;} `],
 })
 export class ShareButtonComponent implements OnInit {
 
@@ -23,10 +23,11 @@ export class ShareButtonComponent implements OnInit {
       console.log('unsopported socail service, assign social withe supported service!');
       return;
     }
-    let url = window.location.href;
-    let target_url = this.info.linkTo(this.title, url, this.summary, this.img, this.origin, this.key);
+
+    let target_url = this.info.linkTo(this.title, this.url, this.summary, this.img, this.origin, this.key);
     window.open(target_url, null, null, false);
   }
+
 
   @HostListener('mouseenter') onMouseEnter() {
     let color = this.hoverColor;
@@ -36,6 +37,15 @@ export class ShareButtonComponent implements OnInit {
   }
   @HostListener('mouseleave') onMouseLeave() {
     this._colorHolder = this.color;
+  }
+
+  private _url: string;
+  @Input() get url() {
+    return this._url ? this._url : window.location.href;
+  }
+
+  set url(url: string) {
+    this._url = url;
   }
 
   private _colorHolder: string;
