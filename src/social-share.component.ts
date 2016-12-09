@@ -39,13 +39,13 @@ export class SocialShareComponent implements AfterContentInit {
 
   private _summary: string;
 
+  @Input() set summary(s: string) {
+    this._summary = s;
+  }
+
   get summary() {
     //todo: if _summary is empty get default summary from head meta.
     return this._summary;
-  }
-
-  set summary(s: string) {
-    this._summary = s;
   }
 
   private _img: string;
