@@ -8,7 +8,10 @@ import { SocialShareComponent } from '../social-share.component';
   styles: [`md-icon {  cursor: pointer; } 
             md-icon:hover {font-size: 1.05em;
               transform: translate(-0.02em, -0.02em);
-              text-shadow: .05em .05em #ddd;} `],
+              text-shadow: .05em .05em #ddd;
+              transition: all 0.2s linear;
+            } `
+          ],
 })
 export class ShareButtonComponent implements OnInit {
 
@@ -62,7 +65,7 @@ export class ShareButtonComponent implements OnInit {
   get hoverColor() {
     return this._hoverColor ? this._hoverColor : this.parent.hoverColor;
   }
-  
+
   private _title: string;
   @Input() get title() {
     return this._title ? this._title : this.parent.title;
@@ -72,7 +75,7 @@ export class ShareButtonComponent implements OnInit {
   }
 
   private _summary: string;
-  @Input() get summary() { 
+  @Input() get summary() {
     return this._summary ? this._summary : this.parent.summary;
   }
   set summary(s: string) {
