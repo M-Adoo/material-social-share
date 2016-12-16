@@ -5,13 +5,7 @@ import { SocialShareComponent } from '../social-share.component';
 @Component({
   selector: 'share-button',
   template: `<md-icon fontSet='socail-icon' (click)= 'share()' [fontIcon]="info.icon" [style.color] = "_colorHolder"></md-icon>`,
-  styles: [`md-icon {  cursor: pointer; } 
-            md-icon:hover {font-size: 1.05em;
-              transform: translate(-0.02em, -0.02em);
-              text-shadow: .05em .05em #ddd;
-              transition: all 0.2s linear;
-            } `
-          ],
+  styleUrls: ["./share-button.component.scss"]
 })
 export class ShareButtonComponent implements OnInit {
 

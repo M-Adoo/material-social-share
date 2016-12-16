@@ -8,8 +8,7 @@ import { Title } from '@angular/platform-browser';
               <ng-content select='social-label'></ng-content>
               <ng-content select='share-button'></ng-content>
              </div>`,
-  styles: [":host { line-height: 24px; display:block;}"],
-
+  styles: [":host { line-height: 24px; display:block;}"]
 })
 
 
