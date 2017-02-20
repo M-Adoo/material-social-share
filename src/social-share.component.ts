@@ -1,24 +1,30 @@
 import { Component, Input, ContentChildren, AfterContentInit, QueryList } from '@angular/core';
 import { ShareButtonComponent } from './share-button/share-button.component';
+import { QrCodeButton } from './qrcode/qrcode.component';
 import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'social-share',
   template: `<div [style.color] = 'color'>
               <ng-content select='social-label'></ng-content>
-              <ng-content select='share-button'></ng-content>
+              <ng-content select='share-button, qrcode-button'></ng-content>
              </div>`,
-  styles: [":host { line-height: 24px; display:block;}"]
+  styleUrls: ['./social-share.component.scss']
 })
 
 
 export class SocialShareComponent implements AfterContentInit {
 
   constructor(private defaultTitle: Title) { };
+
   @ContentChildren(ShareButtonComponent) private btns: QueryList<ShareButtonComponent>;
+  @ContentChildren(QrCodeButton) private btns2: QueryList<QrCodeButton>;
 
   ngAfterContentInit() {
     for (let btn of this.btns.toArray()) {
+      btn.parent = this;
+    }
+    for (let btn of this.btns2.toArray()) {
       btn.parent = this;
     }
   }

@@ -2,6 +2,7 @@
 .social-qzone:before { content: '\e800'; } /* '' */
 .social-diandian:before { content: '\e801'; } /* '' */
 .social-douban:before { content: '\e802'; } /* '' */
+.social-qrcode:before { content: '\e803'; } /* '' */
 .social-twitter:before { content: '\f099'; } /* '' */
 .social-help:before { content: '\f128'; } /* '' */
 .social-weibo:before { content: '\f18a'; } /* '' */

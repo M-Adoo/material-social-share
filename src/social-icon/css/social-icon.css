@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'social-icon';
-  src: url('../font/social-icon.eot?16519986');
-  src: url('../font/social-icon.eot?16519986#iefix') format('embedded-opentype'),
-       url('../font/social-icon.woff2?16519986') format('woff2'),
-       url('../font/social-icon.woff?16519986') format('woff'),
-       url('../font/social-icon.ttf?16519986') format('truetype'),
-       url('../font/social-icon.svg?16519986#social-icon') format('svg');
+  src: url('../font/social-icon.eot?83218587');
+  src: url('../font/social-icon.eot?83218587#iefix') format('embedded-opentype'),
+       url('../font/social-icon.woff2?83218587') format('woff2'),
+       url('../font/social-icon.woff?83218587') format('woff'),
+       url('../font/social-icon.ttf?83218587') format('truetype'),
+       url('../font/social-icon.svg?83218587#social-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'social-icon';
-    src: url('../font/social-icon.svg?16519986#social-icon') format('svg');
+    src: url('../font/social-icon.svg?83218587#social-icon') format('svg');
   }
 }
 */
@@ -58,6 +58,7 @@
 .social-qzone:before { content: '\e800'; } /* '' */
 .social-diandian:before { content: '\e801'; } /* '' */
 .social-douban:before { content: '\e802'; } /* '' */
+.social-qrcode:before { content: '\e803'; } /* '' */
 .social-twitter:before { content: '\f099'; } /* '' */
 .social-help:before { content: '\f128'; } /* '' */
 .social-weibo:before { content: '\f18a'; } /* '' */

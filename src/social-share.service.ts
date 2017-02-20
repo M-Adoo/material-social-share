@@ -19,7 +19,7 @@ export interface SocialInfo {
 export type SocialServiceSupported
     = 'weibo' | 'twitter'
     | 'qq' | 'qzone' | 'douban' | 'diandian' | 'facebook'
-    | 'google-plus' | 'linkedin';
+    | 'google-plus' | 'linkedin' | 'qrcode';
 export type SSS = SocialServiceSupported;
 
 let crate: { [key: string]: SocialInfo } = {};
@@ -53,6 +53,8 @@ export function QuerySocialService(social: SSS): SocialInfo {
             return registerGetSocial('google-plus', GoogleShare);
         case 'linkedin':
             return registerGetSocial('linkedin', LinkedinShare);
+        case 'qrcode':
+            return registerGetSocial('qrcode', QrCodeShare);
         default:
             return null;
     }
@@ -191,6 +193,21 @@ class LinkedinShare implements SocialInfo {
         ${ignoreEmpty('summary', summary)}${ignoreEmpty('source', origin)}&armin=armin`
     }
 }
+
+class QrCodeShare implements SocialInfo {
+    hoverColor = 'green';
+    icon = 'social-qrcode';
+    linkTo = (title: string
+        , url: string
+        , summary?: string
+        , img?: string
+        , origin?: string
+        , key?: string): string => {
+
+        return url;
+    }
+}
+
 
 //todo:
 const templates = {
