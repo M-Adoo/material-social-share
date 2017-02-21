@@ -5,14 +5,14 @@ import { MdDialogModule } from '@angular/material/dialog';
 import { SocialShareComponent, SocialLabel } from './social-share.component';
 import { ShareButtonComponent } from './share-button/share-button.component';
 import { QrCodeButton, QrcodeDialog } from './qrcode/qrcode.component';
-import { QRCodeModule } from 'angular2-qrcode'
+import { QrcodeModule } from '../../qrcode';
 
 
 @NgModule({
   imports: [
     CommonModule,
     MdIconModule,
-    QRCodeModule,
+    QrcodeModule,
     MdDialogModule
   ],
   exports: [

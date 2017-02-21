@@ -6,7 +6,7 @@ import { ShareButtonBase } from '../share-button-base';
     selector: 'qrcode-dlg',
     template: `
     <h1 md-dialog-title>扫码分享</h1>
-    <qr-code [value]="url" size=256 [level]="'M'"></qr-code>
+    <qsj-qrcode [value]="url" level='Q' cellSize= 4></qsj-qrcode>
     `
 })
 export class QrcodeDialog {

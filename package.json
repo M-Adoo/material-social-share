@@ -23,8 +23,7 @@
     "@angular/common": "^2.4.8",
     "@angular/core": "^2.4.8",
     "@angular/material": "^2.0.0-beta.2",
-    "@angular/platform-browser": "^2.4.8",
-    "angular2-qrcode": "^2.0.0"
+    "@angular/platform-browser": "^2.4.8"
   },
   "scripts": {
     "build": "rm -rf ./dist && mkdir dist && cp ./readme.md ./dist/ && cp ./src/social-icon ./dist/ -r && cp ./package.json ./dist/ && tsc -p ./src"
