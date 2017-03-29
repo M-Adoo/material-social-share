@@ -17,8 +17,8 @@ export class SocialShareComponent implements AfterContentInit {
 
   constructor(private defaultTitle: Title) { };
 
-  @ContentChildren(ShareButtonComponent) private btns: QueryList<ShareButtonComponent>;
-  @ContentChildren(QrCodeButton) private btns2: QueryList<QrCodeButton>;
+  @ContentChildren(ShareButtonComponent) btns: QueryList<ShareButtonComponent>;
+  @ContentChildren(QrCodeButton) btns2: QueryList<QrCodeButton>;
 
   ngAfterContentInit() {
     for (let btn of this.btns.toArray()) {

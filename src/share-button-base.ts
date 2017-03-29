@@ -8,7 +8,7 @@ export abstract class ShareButtonBase {
 
     abstract share();
 
-    protected _colorHolder: string;
+    _colorHolder: string;
     @HostListener('mouseenter') onMouseEnter() {
         let color = this.hoverColor;
         this._colorHolder = color ? color : this.info.hoverColor;
@@ -82,5 +82,5 @@ export abstract class ShareButtonBase {
     }
 
     parent: SocialShareComponent;
-    protected info: SocialService.SocialInfo;
+    info: SocialService.SocialInfo;
 }
