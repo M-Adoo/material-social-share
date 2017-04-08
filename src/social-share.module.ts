@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdIconModule } from '@angular/material/icon';
-import { MdDialogModule } from '@angular/material/dialog';
+import { MdIconModule, MdDialogModule } from '@angular/material';
 import { SocialShareComponent, SocialLabel } from './social-share.component';
 import { ShareButtonComponent } from './share-button/share-button.component';
 import { QrCodeButton, QrcodeDialog } from './qrcode/qrcode.component';

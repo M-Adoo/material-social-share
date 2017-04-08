@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MdDialogRef, MdDialog } from '@angular/material/dialog'
+import { MdDialogRef, MdDialog } from '@angular/material'
 import { ShareButtonBase } from '../share-button-base';
 
 @Component({
