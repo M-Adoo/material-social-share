@@ -20,6 +20,6 @@ export class ShareButtonComponent extends ShareButtonBase {
     }
 
     let target_url = this.info.linkTo(this.title, this.url, this.summary, this.img, this.origin, this.key);
-    window.open(target_url, null, null, false);
+    window.open(target_url, undefined, undefined, false);
   }
 }

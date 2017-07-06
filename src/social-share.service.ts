@@ -56,7 +56,7 @@ export function QuerySocialService(social: SSS): SocialInfo {
         case 'qrcode':
             return registerGetSocial('qrcode', QrCodeShare);
         default:
-            return null;
+            throw 'not supported type'
     }
 }
 
@@ -132,7 +132,7 @@ class DoubanShare implements SocialInfo {
         , key?: string): string => {
 
         return `http://shuo.douban.com/!service/share?href=${url}&name=${title}
-        ${ignoreEmpty('text', summary)}${ignoreEmpty('image', img)}&starid=0&aid=0&style=11`;
+        ${ignoreEmpty('text', summary || '')}${ignoreEmpty('image', img || '')}&starid=0&aid=0&style=11`;
     }
 }
 
@@ -190,7 +190,7 @@ class LinkedinShare implements SocialInfo {
         , key?: string): string => {
 
         return `http://www.linkedin.com/shareArticle?mini=true&ro=true&title=${title}&url=${url}
-        ${ignoreEmpty('summary', summary)}${ignoreEmpty('source', origin)}&armin=armin`
+        ${ignoreEmpty('summary', summary || '')}${ignoreEmpty('source', origin || '')}&armin=armin`
     }
 }
 
