@@ -1,0 +1,17 @@
+:host {
+  text-align: center;
+  display: block;
+}
+
+qr-code {
+  margin: auto;
+}
+
+md-input-container {
+  width: calc(100% - 4em);
+}
+
+button {
+  min-width: 0;
+  width: 4em;
+}

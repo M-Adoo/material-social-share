@@ -1,0 +1,21 @@
+:host {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+}
+
+img {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/deep/ .wx-guide-dialog .mat-dialog-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  padding: 0;
+}

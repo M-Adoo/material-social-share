@@ -1,0 +1,46 @@
+md-list-item {
+  cursor: pointer;
+}
+
+md-expansion-panel-header {
+  padding: 0 16px;
+}
+
+md-expansion-panel-header md-icon {
+  line-height: inherit;
+  padding: 0 4px;
+}
+
+md-icon[svgIcon] {
+  margin: auto 0;
+}
+
+md-icon /deep/ svg {
+  display: block;
+}
+
+md-expansion-panel-header md-icon+span {
+  padding: 0 16px;
+}
+
+/deep/ .mat-expansion-panel-body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+md-expansion-panel:not(.mat-expanded) {
+  box-shadow: none;
+}
+
+md-expansion-panel-header.copy-link,
+md-expansion-panel-header.copy-code {
+  transition: color 0.2s linear;
+}
+
+md-expansion-panel-header.copy-link:hover {
+  color: brown;
+}
+
+md-expansion-panel-header.copy-code:hover {
+  color: darkorange;
+}

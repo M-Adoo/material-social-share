@@ -1,32 +1,80 @@
 {
-  "name": "social-share-ng2",
-  "version": "0.3.1",
-  "description": "Angular2 social share component",
-  "main": "dist/src/index.js",
-  "typings": "dist/src/index.d.ts",
-  "module": "./dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/M-Adoo/ng2-social-share.git"
-  },
-  "keywords": [
-    "angular",
-    "social",
-    "share"
-  ],
+  "name": "material-social-share",
+  "version": "1.0.0",
+  "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
+  "main": "./bundles/material-social-share.umd.js",
+  "module": "./material-social-share.es5.js",
+  "es2015": "./material-social-share.js",
+  "typings": "./material-social-share.d.ts",
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/M-Adoo/ng2-social-share/issues"
-  },
-  "homepage": "https://github.com/M-Adoo/ng2-social-share#readme",
-  "dependencies": {
-    "@angular/common": "^2.4.8",
-    "@angular/core": "^2.4.8",
-    "@angular/material": "^2.0.0-beta.2",
-    "@angular/platform-browser": "^2.4.8"
+  "repository": {},
+  "engines": {
+    "node": ">= 6.9.0",
+    "npm": ">= 3.0.0"
   },
   "scripts": {
-    "build": "rm -rf ./dist && mkdir dist && cp ./readme.md ./dist/ && cp ./src/social-icon ./dist/ -r && cp ./package.json ./dist/ && tsc -p ./src"
+    "clean": "rimraf out-tsc dist/*",
+    "prebuild": "npm run clean",
+    "build": "node build.js",
+    "build-demo": "tsc -p src/demo/",
+    "build-demo:watch": "tsc -p src/demo/ -w",
+    "serve": "lite-server -c=bs-config.json",
+    "prestart": "npm run build-demo",
+    "start": "concurrently \"npm run build-demo:watch\" \"npm run serve\"",
+    "build-test": "tsc -p src/lib/tsconfig.spec.json",
+    "build-test:watch": "tsc -p src/lib/tsconfig.spec.json -w",
+    "pretest": "npm run build-test",
+    "test": "concurrently \"npm run build-test:watch\" \"karma start karma.conf.js\"",
+    "pretest:once": "npm run build-test",
+    "test:once": "karma start karma.conf.js --single-run",
+    "preintegration": "npm run build && cd integration && npm run clean && npm install",
+    "integration": "npm run integration:aot && npm run integration:jit",
+    "integration:jit": "cd integration && npm run e2e",
+    "integration:aot": "cd integration && npm run e2e:aot",
+    "lint": "tslint ./src/**/*.ts -t verbose",
+    "release": "standard-version"
   },
-  "author": "Adoo<Adoo@outlook.com>(http://www.roading.org)"
+  "peerDependencies": {
+    "@angular/core": ">=4.0.0 <5.0.0 || >=4.0.0-beta <5.0.0",
+    "@angular/material": "^2.0.0-beta.8",
+    "@angular/animations": "^4.0.0",
+    "@angular/cdk": "^2.0.0-beta.8",
+    "angular2-qrcode": "^2.0.1",
+    "ngx-clipboard": "https://github.com/M-Adoo/ngx-clipboard.git"
+  },
+  "devDependencies": {
+    "@angular/common": "~4.1.3",
+    "@angular/compiler": "~4.1.3",
+    "@angular/compiler-cli": "~4.1.3",
+    "@angular/core": "~4.1.3",
+    "@angular/http": "^4.2.6",
+    "@angular/platform-browser": "~4.1.3",
+    "@angular/platform-browser-dynamic": "~4.1.3",
+    "@types/jasmine": "2.5.36",
+    "@types/node": "^6.0.46",
+    "angular2-qrcode": "^2.0.1",
+    "camelcase": "^4.0.0",
+    "concurrently": "3.4.0",
+    "core-js": "^2.4.1",
+    "glob": "^7.1.1",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-html-reporter": "^0.2.7",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "lite-server": "^2.2.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.42.0",
+    "rollup-plugin-sourcemaps": "^0.4.1",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rxjs": "^5.0.1",
+    "standard-version": "^4.0.0",
+    "systemjs": "^0.19.40",
+    "tslint": "^4.4.2",
+    "typescript": "~2.3.0",
+    "zone.js": "^0.8.4"
+  }
 }

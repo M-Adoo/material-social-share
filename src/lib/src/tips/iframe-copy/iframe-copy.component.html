@@ -1,0 +1,7 @@
+<p class="mat-caption">
+  通过网页嵌入代码可以将你想要的内容插入到你自己的网站上，全平台通用哦。
+</p>
+<pre class="mat-caption">
+  {{_iframeCode()}}
+<button md-raised-button ngxClipboard [cbContent]="_iframeCode()" [color]="_urlCopied ? 'primary': ''" (cbOnSuccess)="_onUrlCopy()">复制</button>
+</pre>

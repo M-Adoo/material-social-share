@@ -1,0 +1,8 @@
+<qr-code [value]="url" [size]="150" l="Q"></qr-code>
+<p class="mat-caption">{{_qrCodeTip()}}</p>
+<div>
+  <md-input-container>
+    <input mdInput [value]="url" placeholder="网址" disabled>
+  </md-input-container>
+  <button md-raised-button ngxClipboard [cbContent]="url" [color]="_urlCopied ? 'primary': ''" (cbOnSuccess)="_onUrlCopy()">复制</button>
+</div>

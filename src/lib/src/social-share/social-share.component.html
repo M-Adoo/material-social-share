@@ -1,0 +1,54 @@
+<md-list>
+  <md-accordion>
+    <md-expansion-panel #wxExnpansion (opened)="wxExnpansion.expanded = wxExnpansion.expanded && !wx.inWechatBrowser()">
+      <md-expansion-panel-header #wx="mdxWechat" mdxWechat [url]="url" [img]="img" [title]="title" [summary]="summary">
+        <md-icon svgIcon="ss_wechat"></md-icon>
+        <span>微信</span>
+      </md-expansion-panel-header>
+      <mdx-wechat-tips></mdx-wechat-tips>
+    </md-expansion-panel>
+    <md-list-item mdxWeibo [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon md-list-icon svgIcon="ss_weibo"></md-icon>
+      <span md-line>新浪微博</span>
+    </md-list-item>
+    <md-list-item mdxQQ [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon md-list-icon svgIcon="ss_qq"></md-icon>
+      <span md-line>QQ好友</span>
+    </md-list-item>
+    <md-expansion-panel>
+      <md-expansion-panel-header class='copy-link'>
+        <md-icon>content_copy</md-icon>
+        <span>复制网址／二维码</span>
+      </md-expansion-panel-header>
+      <mdx-copy [url]="url"></mdx-copy>
+    </md-expansion-panel>
+    <md-expansion-panel>
+      <md-expansion-panel-header class="copy-code">
+        <md-icon>code</md-icon>
+        <span>网页嵌入</span>
+      </md-expansion-panel-header>
+      <mdx-iframe-copy [url]="url"></mdx-iframe-copy>
+    </md-expansion-panel>
+  </md-accordion>
+  <md-list-item>
+    <span [style.margin-right.px]="2">其它:</span>
+    <button md-icon-button mdxQzone [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon svgIcon="ss_qzone" ></md-icon>
+    </button>
+    <button md-icon-button mdxDouban [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon  svgIcon="ss_douban" ></md-icon>
+    </button>
+    <button md-icon-button mdxTwitter [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon svgIcon="ss_twitter" ></md-icon>
+    </button>
+    <button md-icon-button mdxFacebook [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon svgIcon="ss_facebook" ></md-icon>
+    </button>
+    <button md-icon-button mdxGplus [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon svgIcon="ss_gplus" ></md-icon>
+    </button>
+    <button md-icon-button mdxLinkedin [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-icon svgIcon="ss_linkedin" ></md-icon>
+    </button>
+  </md-list-item>
+</md-list>
