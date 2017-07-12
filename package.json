@@ -1,6 +1,6 @@
 {
   "name": "material-social-share",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Library QuickStart package.json from the documentation, supplemented with testing support",
   "main": "./bundles/material-social-share.umd.js",
   "module": "./material-social-share.es5.js",

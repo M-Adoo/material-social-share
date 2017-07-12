@@ -8,10 +8,13 @@ qr-code {
 }
 
 md-input-container {
-  width: calc(100% - 4em);
+  width: calc(100%);
 }
 
 button {
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
   min-width: 0;
   width: 4em;
 }
