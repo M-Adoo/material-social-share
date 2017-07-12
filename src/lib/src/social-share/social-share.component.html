@@ -1,17 +1,17 @@
 <md-list>
   <md-accordion>
     <md-expansion-panel #wxExnpansion (opened)="wxExnpansion.expanded = wxExnpansion.expanded && !wx.inWechatBrowser()">
-      <md-expansion-panel-header #wx="mdxWechat" mdxWechat [url]="url" [img]="img" [title]="title" [summary]="summary">
+      <md-expansion-panel-header #wx="mdxWechat" mdxWechat>
         <md-icon svgIcon="ss_wechat"></md-icon>
         <span>微信</span>
       </md-expansion-panel-header>
-      <mdx-wechat-tips></mdx-wechat-tips>
+      <mdx-wechat-tips [url]="url"></mdx-wechat-tips>
     </md-expansion-panel>
-    <md-list-item mdxWeibo [url]="url" [img]="img" [title]="title" [summary]="summary">
+    <md-list-item mdxWeibo>
       <md-icon md-list-icon svgIcon="ss_weibo"></md-icon>
       <span md-line>新浪微博</span>
     </md-list-item>
-    <md-list-item mdxQQ [url]="url" [img]="img" [title]="title" [summary]="summary">
+    <md-list-item mdxQQ>
       <md-icon md-list-icon svgIcon="ss_qq"></md-icon>
       <span md-line>QQ好友</span>
     </md-list-item>
@@ -32,23 +32,23 @@
   </md-accordion>
   <md-list-item>
     <span [style.margin-right.px]="2">其它:</span>
-    <button md-icon-button mdxQzone [url]="url" [img]="img" [title]="title" [summary]="summary">
-      <md-icon svgIcon="ss_qzone" ></md-icon>
+    <button md-icon-button mdxQzone>
+      <md-icon svgIcon="ss_qzone"></md-icon>
     </button>
-    <button md-icon-button mdxDouban [url]="url" [img]="img" [title]="title" [summary]="summary">
-      <md-icon  svgIcon="ss_douban" ></md-icon>
+    <button md-icon-button mdxDouban>
+      <md-icon  svgIcon="ss_douban"></md-icon>
     </button>
-    <button md-icon-button mdxTwitter [url]="url" [img]="img" [title]="title" [summary]="summary">
-      <md-icon svgIcon="ss_twitter" ></md-icon>
+    <button md-icon-button mdxTwitter>
+      <md-icon svgIcon="ss_twitter"></md-icon>
     </button>
-    <button md-icon-button mdxFacebook [url]="url" [img]="img" [title]="title" [summary]="summary">
-      <md-icon svgIcon="ss_facebook" ></md-icon>
+    <button md-icon-button mdxFacebook>
+      <md-icon svgIcon="ss_facebook"></md-icon>
     </button>
-    <button md-icon-button mdxGplus [url]="url" [img]="img" [title]="title" [summary]="summary">
-      <md-icon svgIcon="ss_gplus" ></md-icon>
+    <button md-icon-button mdxGplus>
+      <md-icon svgIcon="ss_gplus"></md-icon>
     </button>
-    <button md-icon-button mdxLinkedin [url]="url" [img]="img" [title]="title" [summary]="summary">
-      <md-icon svgIcon="ss_linkedin" ></md-icon>
+    <button md-icon-button mdxLinkedin>
+      <md-icon svgIcon="ss_linkedin"></md-icon>
     </button>
   </md-list-item>
 </md-list>

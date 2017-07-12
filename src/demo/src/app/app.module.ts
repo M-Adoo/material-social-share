@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { MdIconModule, MdButtonModule } from '@angular/material';
+import { MdIconModule, MdButtonModule, MdDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SocialShareModule } from 'material-social-share';
+import { SocialShareModule, DefaultSocialShareComponent } from 'material-social-share';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { SocialShareModule } from 'material-social-share';
     SocialShareModule,
     BrowserAnimationsModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DefaultSocialShareComponent]
 })
 export class AppModule { }
