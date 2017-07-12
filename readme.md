@@ -1,16 +1,25 @@
-## install socail-share-ng2 component
+# material-social-share
+
+## Dependencies
+
+Angular >= 4.0.0
+@angular/material: >= 2.0.0-beta.8,
+
+## install 
 
 ```
- npm i social-share-ng2
+ npm i material-social-share --save
+
 ```
 
-## include socail-share-ng2 module and style
+## Use it
 
+import SocialShareModule in your code
 
-src/app/app.module.ts
+*.module.ts
 
 ```ts
-import { SocialShareModule } from 'social-share-ng2';
+import { SocialShareModule } from 'material-social-share';
 
 @NgModule({
   imports: [
@@ -19,60 +28,34 @@ import { SocialShareModule } from 'social-share-ng2';
   ]
 })
 ```
-social-share-ng2 use font icon, we also need to load the icon font
-in `index.html` or import it to `style.css`
 
-**load in index.html**:
-
-```html
-<link href="../node_modules/social-share-ng2/social-icon/css/social-icon.css" rel="stylesheet">
+*compolent.html
 ```
-or **import by style.css**
-
-```scss
-@improt '../node_modules/social-share-ng2/social-icon/css/social-icon.css'
-``` 
-
-## use it
-
-use socail-share-ng2 like this:
-
-```html
-<social-share>
-    <social-label>share</social-label>
-    <share-button social='weibo'></share-button>
-    <share-button social='qq'></share-button>
-    <share-button social='qzone'></share-button>
-    <share-button social='douban'></share-button>
-    <share-button social='twitter'></share-button>
-    <share-button social='facebook'></share-button>
-    <share-button social='google-plus'></share-button>
-    <share-button social='linkedin'></share-button>
-</social-share>
+  <mdx-social-share></mdx-social-share>
 ```
 
-socail-share-ng2 has label and button, you can display what label your like
-and pick witch socail service you want.  
+## remember to bundle the social icons in your project
+
+material-social-share use  Material icons font and some social svg icons.
+
+social svg icon in material-social-share\assets\social.
+
+with angular/cli just update assets field in .angular-cli.json:
+
+```
+"assets": [
+      ***
+      "assets",
+      "favicon.ico",
+      {
+        "glob": "**/*",
+        "input": "../node_modules/material-social-share/assets/social",
+        "output": "./assets/social"
+      }
+      ***
+    ],
+```
 
 ### custom config
 
-you can custom config the share context or button color.
-
-**todo**
-
-## demo
-
-todo
-
-# Todo list
-
-- [ ] test all
-- [x] color config
-- [ ] documents
-- [ ] what's it?
-- [ ] todo
-- [ ] example
-
-# Tip
-
-**Remember link style ./social-icon/css/socail-icon.css**
+you can set `img`, `title`, `summary`, `url` to custom share info.

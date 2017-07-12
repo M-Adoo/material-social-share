@@ -6,9 +6,22 @@
   "module": "./material-social-share.es5.js",
   "es2015": "./material-social-share.js",
   "typings": "./material-social-share.d.ts",
-  "author": "",
+  "author": "Adoo<Adoo@outlook.com>(https://github.com/M-Adoo)",
   "license": "MIT",
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M-Adoo/ng2-social-share.git"
+  },
+  "keywords": [
+    "angular",
+    "social",
+    "material",
+    "share"
+  ],
+  "bugs": {
+    "url": "https://github.com/M-Adoo/ng2-social-share/issues"
+  },
+  "homepage": "https://github.com/M-Adoo/ng2-social-share#readme",
   "engines": {
     "node": ">= 6.9.0",
     "npm": ">= 3.0.0"

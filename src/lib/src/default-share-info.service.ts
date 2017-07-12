@@ -1,4 +1,4 @@
-import { Title } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -8,11 +8,12 @@ export class DefaultShareInfoService {
   private _summary: string;
   private _url: string;
 
-  constructor(protected _dt: Title) { }
+  constructor(protected _dt: Title,
+    private _meta: Meta) { }
 
   get img() {
-    // todo query a default img from meta
-    return this._img;
+    let imgTag = this._meta.getTag('name=image')
+    return this._img || imgTag && imgTag.content;
   }
 
   set img(i) { this._img = i; }
@@ -24,8 +25,8 @@ export class DefaultShareInfoService {
   set title(t) { this._title = t; }
 
   get summary() {
-    // todo query  a default summary from meta
-    return this._summary;
+    let descTag = this._meta.getTag('name=description');
+    return this._summary || descTag && descTag.content;
   }
 
   set summary(s) { this._summary = s; }

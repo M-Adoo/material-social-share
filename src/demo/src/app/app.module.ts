@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { SocialDirectivesModule, SocialShareModule } from 'material-social-share';
+import { SocialShareModule } from 'material-social-share';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,6 @@ import { SocialDirectivesModule, SocialShareModule } from 'material-social-share
     MdIconModule,
     MdButtonModule,
     SocialShareModule,
-    SocialDirectivesModule,
     BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
