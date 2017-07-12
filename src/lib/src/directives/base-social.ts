@@ -32,10 +32,10 @@ export class BaseSocial {
   }
 
   shareContent() {
-    let title = this.title || this._dsi.title;
-    let url = this.url || window.location.href;
-    let summary = `[${title}]${this.summary ? this.summary : ''}` || this._dsi.summary;
-    let img = this.img || this._dsi.img;
+    let title = encodeURIComponent(this.title || this._dsi.title);
+    let url = encodeURIComponent(this.url || window.location.href);
+    let summary = encodeURIComponent(`[${title}]${this.summary || this._dsi.summary}`);
+    let img = encodeURIComponent(this.img || this._dsi.img);
     return [title, url, summary, img];
   }
 

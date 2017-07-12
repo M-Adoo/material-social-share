@@ -12,7 +12,7 @@ import { DefaultShareInfoService } from './../../default-share-info.service';
 })
 export class WeiboDirective extends BaseSocial {
 
-  @Input() appkey: string;
+  @Input() appkey: string = "3293353154";
   @Input() hoverColor = "#e32529";
 
   constructor(dst: DefaultShareInfoService,
@@ -23,7 +23,7 @@ export class WeiboDirective extends BaseSocial {
 
   @HostListener('click') share() {
     let [title, url, summary, img] = this.shareContent();
-    let to = `http://service.weibo.com/share/share.php?url=${url}&title=${summary}${img ? `&pic=${img}` : ''}${this.appkey ? `&appkey=${this.appkey}` : ''}`;
+    let to = `http://service.weibo.com/share/share.php?title=${summary}%20${url}${this.searchJoin('pic', img)}${this.searchJoin('appkey', this.appkey)}`;
     window.open(to, undefined, undefined, false);
   }
 }

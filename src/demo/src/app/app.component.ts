@@ -15,6 +15,7 @@ export class AppComponent {
   }
 
   share() {
-    this._dlg.open(DefaultSocialShareComponent, { panelClass: 'xs-full-dlg' });
+    let ref = this._dlg.open(DefaultSocialShareComponent, { panelClass: 'xs-full-dlg' });
+    ref.componentInstance.summary = "Best wish for you!";
   }
 }

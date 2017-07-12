@@ -139,10 +139,8 @@ function _relativeCopy(fileGlob, from, to) {
       files.forEach(file => {
         const origin = path.join(from, file);
         const dest = path.join(to, file);
-        const data = fs.readFileSync(origin, 'utf-8');
         _recursiveMkDir(path.dirname(dest));
-        fs.writeFileSync(dest, data);
-        resolve();
+        fs.createReadStream(origin).pipe(fs.createWriteStream(dest).on('finish', resolve));
       })
     })
   });
