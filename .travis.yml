@@ -1,0 +1,31 @@
+language: node_js
+node_js: stable
+
+branches:
+  only:
+  - master
+
+before_install:
+- export TZ='Asia/Shanghai'
+- npm install @angular/cli -g
+- git config --global user.name "Adoo"
+- git config --global user.email "Adoo@outlook.com"
+
+install:
+- npm install
+
+script:
+- npm run build
+- cd src/demo
+- npm install
+- ng build --prod 
+
+after_success:
+
+# deploy blog
+- cd ./dist
+- cp index.html 404.html
+- git init
+- git add .
+- git commit -m "Travis Ci auto deploy demo"
+- git push --force --quiet "https://${GH_TOKEN}@github.com/M-Adoo/pano-blog.git" master:gh-pages

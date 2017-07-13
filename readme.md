@@ -1,5 +1,7 @@
 # material-social-share
 
+[![Build Status](https://travis-ci.org/M-Adoo/material-social-share.svg?branch=master)](https://travis-ci.org/M-Adoo/material-social-share)
+
 ## Dependencies
 
 Angular >= 4.0.0
@@ -59,3 +61,8 @@ with angular/cli just update assets field in .angular-cli.json:
 ### custom config
 
 you can set `img`, `title`, `summary`, `url` to custom share info.
+
+
+## todo
+
+ci auto update demo
