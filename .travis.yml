@@ -18,7 +18,7 @@ script:
 - npm run build
 - cd src/demo
 - npm install
-- ng build --prod 
+- ng build --prod --base-href material-social-share
 
 after_success:
 

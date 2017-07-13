@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/M-Adoo/material-social-share.svg?branch=master)](https://travis-ci.org/M-Adoo/material-social-share)
 
+[**Demo**](https://m-adoo.github.io/material-social-share/)
+
 ## Dependencies
 
 Angular >= 4.0.0
