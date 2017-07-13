@@ -28,4 +28,4 @@ after_success:
 - git init
 - git add .
 - git commit -m "Travis Ci auto deploy demo"
-- git push --force --quiet "https://${GH_TOKEN}@github.com/M-Adoo/pano-blog.git" master:gh-pages
+- git push --force --quiet "https://${GH_TOKEN}@github.com/M-Adoo/material-social-share.git" master:gh-pages
