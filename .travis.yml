@@ -22,7 +22,7 @@ script:
 
 after_success:
 
-# deploy blog
+# deploy demo
 - cd ./dist
 - cp index.html 404.html
 - git init
