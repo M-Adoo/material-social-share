@@ -1,5 +1,5 @@
 import { DefaultSocialShareComponent } from 'material-social-share';
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  constructor(private _dlg: MdDialog) {
+  constructor(private _dlg: MatDialog) {
 
   }
 

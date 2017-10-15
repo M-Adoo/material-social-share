@@ -7,7 +7,7 @@ qr-code {
   margin: auto;
 }
 
-md-input-container {
+mat-form-field {
   width: calc(100%);
 }
 

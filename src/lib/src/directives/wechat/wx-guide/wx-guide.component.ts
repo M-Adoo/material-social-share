@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { MdDialogRef } from '@angular/material';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'mdx-wx-guide',
@@ -8,7 +8,7 @@ import { MdDialogRef } from '@angular/material';
 })
 export class WxGuideComponent implements OnInit {
 
-  constructor(private _ref: MdDialogRef<WxGuideComponent>) { }
+  constructor(private _ref: MatDialogRef<WxGuideComponent>) { }
 
   ngOnInit() {
   }

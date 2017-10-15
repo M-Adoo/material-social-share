@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdButtonModule, MdInputModule } from '@angular/material';
+import { MatButtonModule, MatInputModule } from '@angular/material';
 import { WechatTipsComponent } from './wechat-tips/wechat-tips.component';
 import { QRCodeModule } from 'angular2-qrcode';
 import { CopyComponent } from './copy/copy.component';
@@ -11,8 +11,8 @@ import { IframeCopyComponent } from './iframe-copy/iframe-copy.component'
   imports: [
     CommonModule,
     QRCodeModule,
-    MdButtonModule,
-    MdInputModule,
+    MatButtonModule,
+    MatInputModule,
     ClipboardModule,
   ],
   declarations: [WechatTipsComponent, CopyComponent, IframeCopyComponent],

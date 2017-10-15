@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { MdIconModule, MdButtonModule, MdDialogModule } from '@angular/material';
+import { MatIconModule, MatButtonModule, MatDialogModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,8 +13,8 @@ import { SocialShareModule, DefaultSocialShareComponent } from 'material-social-
   imports: [
     BrowserModule,
     CommonModule,
-    MdIconModule,
-    MdButtonModule,
+    MatIconModule,
+    MatButtonModule,
     SocialShareModule,
     BrowserAnimationsModule
   ],

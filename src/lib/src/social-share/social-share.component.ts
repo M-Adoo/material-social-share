@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MdIconRegistry } from '@angular/material';
+import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 import { DefaultShareInfoService } from './../default-share-info.service';
 
@@ -24,7 +24,7 @@ export class DefaultSocialShareComponent implements OnInit {
 
   constructor(
     private _dsi: DefaultShareInfoService,
-    private _fr: MdIconRegistry,
+    private _fr: MatIconRegistry,
     private _sanitizer: DomSanitizer) {
   }
 

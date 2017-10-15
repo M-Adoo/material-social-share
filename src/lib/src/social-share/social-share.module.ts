@@ -1,7 +1,7 @@
 import { DefaultShareInfoService } from './../default-share-info.service';
 import {
-  MdIconModule, MdExpansionModule,
-  MdButtonModule, MdListModule, MdExpansionPanel
+  MatIconModule, MatExpansionModule,
+  MatButtonModule, MatListModule, MatExpansionPanel
 } from '@angular/material';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
@@ -14,10 +14,10 @@ import { TipsModule } from '../tips/index'
   imports: [
     CommonModule,
     HttpModule,
-    MdIconModule,
-    MdButtonModule,
-    MdListModule,
-    MdExpansionModule,
+    MatIconModule,
+    MatButtonModule,
+    MatListModule,
+    MatExpansionModule,
     SocialDirectivesModule,
     TipsModule
   ],

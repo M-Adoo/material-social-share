@@ -1,4 +1,4 @@
-import { MdDialog } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { BaseSocial } from './../base-social';
 import { WxGuideComponent } from './wx-guide/wx-guide.component';
 import { DefaultShareInfoService } from './../../default-share-info.service';
@@ -17,7 +17,7 @@ export class WechatDirective extends BaseSocial {
   @Input() at: string;
   constructor(dsi: DefaultShareInfoService,
     elemRef: ElementRef,
-    private _dlg: MdDialog,
+    private _dlg: MatDialog,
     render: Renderer2) {
     super(dsi, elemRef, render);
   }

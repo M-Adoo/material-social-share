@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdDialogModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material';
 import { WeiboDirective } from './weibo/weibo.directive';
 import { QQDirective } from './qq/qq.directive';
 import { QzoneDirective } from './qzone/qzone.directive';
@@ -15,7 +15,7 @@ import { WxGuideComponent } from './wechat/wx-guide/wx-guide.component';
 @NgModule({
   imports: [
     CommonModule,
-    MdDialogModule
+    MatDialogModule
   ],
   declarations: [
     WeiboDirective, QQDirective,
